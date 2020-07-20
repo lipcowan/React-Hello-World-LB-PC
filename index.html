@@ -18,19 +18,19 @@
 
     <script type="text/babel">
 
-      function App() {
+      function App(props) {
           return (
             <div>
                 <header>
                     <div id="img">
                         <img src="headerPhoto.jpg" alt="insta post" width="700px"/>
                     </div>
-                    <h1 class="title">About me</h1>
+                    <h1 className="title">About Me</h1>
                 </header>
 
                 <main>
                     <section id="introduction">
-                        <p>Hi I'm Sally I'm 25 and below this line you'll find more information about me.</p>
+                        <p>Hi I'm {props.name} I'm 25 and below this line you'll find more information about me.</p>
                     </section>
                     <br />
                     <section id="Education">
@@ -75,7 +75,9 @@
             </div>
         )
       }
-      ReactDOM.render(<App />,document.getElementById('application-root'));
+      ReactDOM.render(<App
+         name='Sally' />,
+         document.getElementById('application-root'));
     </script>
   </body>
 </html>

@@ -1,0 +1,9 @@
+main {
+  color: red;
+}
+
+@media all and (min-width: 600px) {
+  main {
+    color: purple;
+  }
+}
